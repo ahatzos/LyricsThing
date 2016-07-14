@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943691A71D3578F7007EC4C0 /* historyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943691A61D3578F7007EC4C0 /* historyTableViewController.swift */; };
 		949A7CB81D353961007DA945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A7CB71D353961007DA945 /* AppDelegate.swift */; };
 		949A7CBA1D353961007DA945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A7CB91D353961007DA945 /* ViewController.swift */; };
 		949A7CBD1D353961007DA945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949A7CBB1D353961007DA945 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		943691A61D3578F7007EC4C0 /* historyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyTableViewController.swift; sourceTree = "<group>"; };
 		949A7CB41D353961007DA945 /* LyricsThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricsThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949A7CB71D353961007DA945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949A7CB91D353961007DA945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				949A7CB71D353961007DA945 /* AppDelegate.swift */,
 				949A7CB91D353961007DA945 /* ViewController.swift */,
 				949A7CBB1D353961007DA945 /* Main.storyboard */,
+				943691A61D3578F7007EC4C0 /* historyTableViewController.swift */,
 				949A7CBE1D353961007DA945 /* Assets.xcassets */,
 				949A7CC01D353961007DA945 /* LaunchScreen.storyboard */,
 				949A7CC31D353961007DA945 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				949A7CBA1D353961007DA945 /* ViewController.swift in Sources */,
+				943691A71D3578F7007EC4C0 /* historyTableViewController.swift in Sources */,
 				949A7CB81D353961007DA945 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LyricsThing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.LyricsThing;
@@ -260,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LyricsThing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.LyricsThing;
@@ -286,6 +292,7 @@
 				949A7CC81D353961007DA945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
