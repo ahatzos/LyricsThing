@@ -13,6 +13,7 @@
 		949A7CBD1D353961007DA945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949A7CBB1D353961007DA945 /* Main.storyboard */; };
 		949A7CBF1D353961007DA945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949A7CBE1D353961007DA945 /* Assets.xcassets */; };
 		949A7CC21D353961007DA945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949A7CC01D353961007DA945 /* LaunchScreen.storyboard */; };
+		94A6855C1D39666F0032533F /* lyircsSegwayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6855B1D39666F0032533F /* lyircsSegwayTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		949A7CBE1D353961007DA945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		949A7CC11D353961007DA945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949A7CC31D353961007DA945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A6855B1D39666F0032533F /* lyircsSegwayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lyircsSegwayTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				949A7CB71D353961007DA945 /* AppDelegate.swift */,
 				949A7CB91D353961007DA945 /* ViewController.swift */,
 				949A7CBB1D353961007DA945 /* Main.storyboard */,
+				94A6855B1D39666F0032533F /* lyircsSegwayTableViewController.swift */,
 				943691A61D3578F7007EC4C0 /* historyTableViewController.swift */,
 				949A7CBE1D353961007DA945 /* Assets.xcassets */,
 				949A7CC01D353961007DA945 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				949A7CBA1D353961007DA945 /* ViewController.swift in Sources */,
+				94A6855C1D39666F0032533F /* lyircsSegwayTableViewController.swift in Sources */,
 				943691A71D3578F7007EC4C0 /* historyTableViewController.swift in Sources */,
 				949A7CB81D353961007DA945 /* AppDelegate.swift in Sources */,
 			);

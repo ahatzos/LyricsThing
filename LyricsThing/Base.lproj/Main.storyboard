@@ -18,40 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nas" borderStyle="roundedRect" placeholder="Enter artist:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="573-Pe-nWc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter artist:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="573-Pe-nWc">
                                 <rect key="frame" x="188" y="85" width="226" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eK7-fM-QhZ"/>
                                     <constraint firstAttribute="width" constant="226" id="vBP-NM-nyB"/>
                                 </constraints>
+                                <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="light"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-Pu-c7J">
-                                <rect key="frame" x="246" y="193" width="110" height="24"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Lyrics will apear here:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9u2-SJ-DcF">
+                                <rect key="frame" x="72" y="250" width="476" height="319"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="Ppf-um-eG6"/>
+                                    <constraint firstAttribute="height" constant="400" id="r55-0g-gyI"/>
+                                </constraints>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter song:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-rs-Lwc">
+                                <rect key="frame" x="188" y="148" width="226" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-Pu-c7J">
+                                <rect key="frame" x="132" y="186" width="339" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="gkO-Wh-DS7"/>
+                                    <constraint firstAttribute="width" constant="339" id="vzr-9j-Vra"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Enter">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap go (keyboard)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKh-qv-bvE"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Lyrics will apear here:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9u2-SJ-DcF">
-                                <rect key="frame" x="75" y="250" width="476" height="319"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nas is like" borderStyle="roundedRect" placeholder="Enter song:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-rs-Lwc">
-                                <rect key="frame" x="188" y="148" width="226" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bdX-Pu-c7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="0dj-2R-U69"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="top" secondItem="573-Pe-nWc" secondAttribute="bottom" constant="30" id="2vf-5a-Q56"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xe-dQ-zJx"/>
+                            <constraint firstItem="9u2-SJ-DcF" firstAttribute="top" secondItem="bdX-Pu-c7J" secondAttribute="bottom" constant="33" id="CmO-BG-8cJ"/>
                             <constraint firstItem="bdX-Pu-c7J" firstAttribute="top" secondItem="4Rw-rs-Lwc" secondAttribute="bottom" constant="-4" id="D7L-k4-ecv"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="width" secondItem="573-Pe-nWc" secondAttribute="width" id="EwS-ua-46r"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="top" secondItem="573-Pe-nWc" secondAttribute="bottom" constant="46" id="Jb8-9g-B4L"/>
@@ -60,6 +77,7 @@
                             <constraint firstItem="573-Pe-nWc" firstAttribute="width" secondItem="4Rw-rs-Lwc" secondAttribute="width" id="U7U-as-h2o"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="VyP-KQ-o1b"/>
                             <constraint firstItem="bdX-Pu-c7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="146" id="bt2-XS-FF2"/>
+                            <constraint firstItem="9u2-SJ-DcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cgF-dB-VP8"/>
                             <constraint firstItem="4Rw-rs-Lwc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="fJU-Ot-ENN"/>
                             <constraint firstItem="bdX-Pu-c7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="168" id="gpK-ds-GI2"/>
                             <constraint firstItem="bdX-Pu-c7J" firstAttribute="top" secondItem="4Rw-rs-Lwc" secondAttribute="bottom" constant="44" id="h2k-bm-egc"/>
@@ -78,14 +96,18 @@
                                 <exclude reference="U7U-as-h2o"/>
                                 <exclude reference="pys-u5-AfK"/>
                                 <exclude reference="sEP-Ab-ehx"/>
-                                <exclude reference="9xe-dQ-zJx"/>
-                                <exclude reference="Jb8-9g-B4L"/>
-                                <exclude reference="VyP-KQ-o1b"/>
-                                <exclude reference="fJU-Ot-ENN"/>
+                                <exclude reference="0dj-2R-U69"/>
                                 <exclude reference="D7L-k4-ecv"/>
                                 <exclude reference="bt2-XS-FF2"/>
                                 <exclude reference="gpK-ds-GI2"/>
                                 <exclude reference="uny-8Y-LCB"/>
+                                <exclude reference="9xe-dQ-zJx"/>
+                                <exclude reference="Jb8-9g-B4L"/>
+                                <exclude reference="VyP-KQ-o1b"/>
+                                <exclude reference="fJU-Ot-ENN"/>
+                                <exclude reference="iwK-2k-8ko"/>
+                                <exclude reference="w5f-hF-Tq1"/>
+                                <exclude reference="xgX-zV-ue8"/>
                             </mask>
                         </variation>
                     </view>
@@ -103,13 +125,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="573-Pe-nWc" id="Xb4-em-3cA"/>
-                        <outlet property="lyricsField" destination="9u2-SJ-DcF" id="eQj-FD-AsD"/>
+                        <outlet property="lyricsField" destination="9u2-SJ-DcF" id="UMb-vT-1zl"/>
                         <outlet property="songLabel" destination="4Rw-rs-Lwc" id="4Am-C1-viQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="439"/>
+            <point key="canvasLocation" x="339" y="392"/>
         </scene>
         <!--History-->
         <scene sceneID="1Ch-FF-kNi">
@@ -139,7 +161,7 @@
                                 <attributedString key="userComments">
                                     <fragment content="aaaah">
                                         <attributes>
-                                            <font key="NSFont" metaFont="toolTip"/>
+                                            <font key="NSFont" metaFont="smallSystem"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -160,12 +182,57 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="History" id="D3K-xf-hUD"/>
+                    <navigationItem key="navigationItem" title="History" id="D3K-xf-hUD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Dbu-Wy-alL">
+                            <connections>
+                                <action selector="trash:" destination="h8H-CV-z8S" id="PII-4m-pa9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="KGc-oU-F0f" id="ss7-Y1-yMo"/>
+                        <segue destination="um3-Ga-6Ag" kind="show" identifier="lyircsSegway" id="rG1-Gn-Hm4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BR-3Y-xPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1403" y="439"/>
+            <point key="canvasLocation" x="1087" y="392"/>
+        </scene>
+        <!--Lyircs Segway Table View Controller-->
+        <scene sceneID="DH8-fN-fYW">
+            <objects>
+                <viewController id="um3-Ga-6Ag" customClass="lyircsSegwayTableViewController" customModule="LyricsThing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ug3-yj-cye"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkv-qD-Ojz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ALL-2A-hc2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-DW-9KD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dkv-qD-Ojz" firstAttribute="top" secondItem="KI2-DW-9KD" secondAttribute="bottom" id="CyB-j2-8ri"/>
+                            <constraint firstAttribute="trailing" secondItem="KI2-DW-9KD" secondAttribute="trailing" id="PdE-gl-qjm"/>
+                            <constraint firstItem="KI2-DW-9KD" firstAttribute="leading" secondItem="ALL-2A-hc2" secondAttribute="leading" id="bZg-ds-eEC"/>
+                            <constraint firstItem="KI2-DW-9KD" firstAttribute="top" secondItem="ug3-yj-cye" secondAttribute="bottom" id="tiO-Rl-yeH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricss" destination="KI2-DW-9KD" id="5MR-lM-S2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RE0-VN-ihI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="378"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1d-MH-rni">

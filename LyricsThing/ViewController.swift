@@ -20,12 +20,33 @@ class ViewController: UIViewController, UITextFieldDelegate, NSXMLParserDelegate
     @IBOutlet weak var songLabel: UITextField!
     
     @IBAction func Plus(sender: UIBarButtonItem) {
-        var i = 0
-        holder.append(songLabel.text!)
-        i+=1
+        
+        let lyricsData = [  "name"      :   songLabel.text,
+                            "lyrics"    :   lyricsField.text]
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey("savedSongs")  == nil {
+            NSUserDefaults.standardUserDefaults().setValue([], forKey: "savedSongs")
+
+        }
+        
+        if let array =  NSUserDefaults.standardUserDefaults().valueForKey("savedSongs") {
+            var songList = array as! Array<AnyObject>
+            songList.append(lyricsData)
+            NSUserDefaults.standardUserDefaults().setValue(songList, forKey: "savedSongs")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        
+        
+        
+        
+
     }
 
- 
+    @IBAction func enterButton(sender: AnyObject) {
+    
+
+    }
+    
     @IBOutlet weak var lyricsField: UITextView!
     
     
@@ -42,13 +63,13 @@ class ViewController: UIViewController, UITextFieldDelegate, NSXMLParserDelegate
         super.viewDidLoad()
       artistLabel.delegate = self
       songLabel.delegate = self
-        
+       self.view.backgroundColor = .blackColor()
         
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
-
+        lyrics = ""
+        lyricsField.text = ""
         
         var urlString = urlBase + artistLabel.text! + songUrl + songLabel.text!
         urlString = urlString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
@@ -58,20 +79,19 @@ class ViewController: UIViewController, UITextFieldDelegate, NSXMLParserDelegate
         // TODO: Prevent nil values in URL
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!) { (data, response, error) in
-            
-        let parser = NSXMLParser(data: data!)
+            let parser = NSXMLParser(data: data!)
             parser.delegate = self
             parser.parse()
-        }
-        
-        task.resume()
+
+               }
+            task.resume()
         textField.resignFirstResponder()
 
     
         return true
      
     }
-   
+
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         if(elementName == "Lyric"){
@@ -85,21 +105,25 @@ class ViewController: UIViewController, UITextFieldDelegate, NSXMLParserDelegate
     }
     
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
-//        print("--------------------------------------------------------------------")
-
-        
+     func parser(parser: NSXMLParser, foundCharacters string: String) {
+       // print("--------------------------------------------------------------------")
         
         if foundLyric == true{
-            lyrics = string
+            // We need to remove the 'Lyrics not found' text because we're going to be concatenating the lyrics on
+            if lyrics == "Lyrics not found" {
+                lyrics = ""
+            }
+            
+            // The reason we are concatenating and not setting a new value is because the lyrics are being printed a line at a time. This means that the next line will overwite the current line. 
+            // The reason it was empty was because the last line of the songs are an empty line
+            lyrics += string
     
         }
-//          print(lyrics)
+          //print(lyrics)
         NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-//            print("TESTSKDHSbdhdshufgdfisufjkdsfnijdsiufhdsiu")
-//            print("test")
+
             self.lyricsField.text = self.lyrics
-            print(self.lyrics)
+            //print(self.lyrics)
         }
 
     }

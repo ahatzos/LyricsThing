@@ -16,7 +16,19 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Untitled 2" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-p5-YO0">
+                                <rect key="frame" x="89" y="0.0" width="463" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="EGW-rz-Enx"/>
+                                    <constraint firstAttribute="width" constant="463" id="XAa-gh-0J5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kj6-p5-YO0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qch-0Q-QUD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Untitled 2" width="724" height="1180"/>
+    </resources>
 </document>
